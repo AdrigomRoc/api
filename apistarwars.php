@@ -65,7 +65,7 @@
                             </tr>
                             <?php
                                 foreach($resultObject->results as $result){
-                                ?>
+                                    ?>
                             <tr>
                                 <td><?php echo $result->name ?></td>
                                 <td><?php echo $result->height ?></td>
@@ -78,12 +78,10 @@
                                 <td><?php echo $result->homeworld ?></td>
                                 <td>
                                     <ul>
-                                        <li><?php echo $result->films[0] ?></li>
-                                        <li><?php echo $result->films[1] ?></li>
-                                        <li><?php echo $result->films[2] ?></li>
-                                        <li><?php echo $result->films[3] ?></li>
-                                        <li><?php echo $result->films[4] ?></li>
-                                        <li><?php echo $result->films[5] ?></li>
+                                    <?php foreach($result->films as $film){?>
+                                        <li><?php echo $film ?></li>
+                                        
+                                    <?php } ?>
                                     </ul>
                                 </td>
                                 <td><?php echo $result->url ?></td> 
@@ -344,7 +342,7 @@
                         <?php
                 }
             }else{
-                echo "Chose you opcion";
+                echo "Chose you opcion and search one name";
         }
     ?>
     
